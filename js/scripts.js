@@ -35,23 +35,31 @@ $(document).ready(function(){
     var pizzaSideArr = pizzaSide;
     var pizzaTop = [];
     var pizzaTopArr = pizzaTop;
+    var resultPrice = neoPizza.addPrice();
+    debugger;
 
     $("input:checkbox[name=topop]:checked").each(function(){
       var bonTop = $(this).val();
+      $("#list").append("<li>" + bonTop + "<li>");
       pizzaTop.push(bonTop);
     });
 
+    debugger;
     $("input:checkbox[name=sideop]:checked").each(function(){
       var bonSide = $(this).val();
+      $("#list1").append("<li>" + bonSide + "<li>");
       pizzaSide.push(bonSide);
     });
 
+    debugger;
+
     var neoPizza = new Pizza(pizzaSize, pizzaTopArr, pizzaSideArr, pizzaSauce, pizzaQuantity);
     $("#userName2").text(userName);
-    $("#list").append("<li>" + neoPizza.+ "<li>")
-    $("#list").append("<li>" + neoPizza+ "<li>")
-    $("#list").append("<li>" + neoPizza+ "<li>")
-    $("#receipt").show();
+    $("#list2").append("<li>" + neoPizza.sauce + "<li>");
+    $("#combien").append(neoPizza.quantities);
+    $("#finalTotal").append("$" + resultPrice);
+    $("#userSize").append("$" + neoPizza.size);
+
 
   });
 });
