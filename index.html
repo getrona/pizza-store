@@ -11,23 +11,170 @@
   <body>
     <div class="container">
 
-      <div class="jumbotron">
+
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.html">Home</a></li>
               <li><a href="page2.html">Our Pizza</a></li>
-              <li><a href="page3.html">Order Now</a></li>
               <li><a href="contact.html">Contact US</a></li>
             </ul>
           </div>
         </nav>
-
+      <div class="jumbotron">
         <h1>Pizza De La (Re)Naissance</h1>
         <p>The Greatest Pizza In Portland.</p>
-        <img src="img/pshoes.jpg" alt="" />
+        <img id="topPic" src="img/pshoes.jpg" alt="" />
       </div>
-      <a href="page3.html"><button type="button" class="btn btn-secondary btn-lg btn-block">Order Now! I am Famish</button></a>
+
+      <form id="pizza_order">
+
+        <div class="well well-lg">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="name">Name:</label>
+              <input id="name" class="form-control">
+            </div>
+            <div class="col-md-2">
+              <label for="quantity">How Many Pizza?</label>
+              <input id="quantity" class="form-control">
+            </div>
+            <div class="col-md-5">
+              <label for="email">E-mail:</label>
+              <input id="email" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="well well-sm">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="img/pizza3.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/wings.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/salad.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/sticks.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/pasta.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/pizza4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="well well-lg">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="top" class="form-group">
+                <h4>Toppings:</h4>
+                  <input name="topop" type="checkbox" value="cheese">Cheese.<br>
+                  <input name="topop" type="checkbox" value="pepperoni">Pepperoni.<br>
+                  <input name="topop" type="checkbox" value="artichoke">Artichoke.<br>
+                  <input name="topop" type="checkbox" value="anchovy">Anchovy.<br>
+                  <input name="topop" type="checkbox" value="meat">Meat Lovers.<br>
+                  <input name="topop" type="checkbox" value="veggie">Veggie Lovers.<br>
+              </div>
+            </div>
+              <div class="col-md-6">
+                <div id="side" class="form-group">
+                  <h4>Sides:</h4>
+                  <input name="sideop" type="checkbox" value="wings">Hot Wings.<br>
+                  <input name="sideop" type="checkbox" value="bread">Breadsticks.<br>
+                  <input name="sideop" type="checkbox" value="salad">Salad.<br>
+                  <input name="sideop" type="checkbox" value="bites">Cheese Bites.<br>
+                  <input name="sideop" type="checkbox" value="chicken">Boneless Chicken.<br>
+                  <input name="sideop" type="checkbox" value="pasta">Pasta Bowl.<br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="well well-sm">
+            <div class="row">
+              <div class="col-md-2">
+                <img src="img/pizza1.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/bites.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/pasta.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/salad.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/boneless.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/pizza2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+          <div class="well well-lg">
+            <div class="row">
+              <div class="col-md-4">
+                <div>
+                  <h4>Sizes:</h4>
+                  <select class="form-control" id="size">
+                    <option selected>Open this select menu</option>
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                    <option value="xl">X-Large</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div>
+                  <h4>Sauces:</h4>
+                  <select class="form-control" id="sauce">
+                    <option selected>Open this select menu</option>
+                    <option value ="alfredo">Alfredo</option>
+                    <option value="bbq">BBQ</option>
+                    <option value="ranch">Ranch</option>
+                    <option value="tomato">Tomato</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div>
+                  <h4>Crusts:</h4>
+                  <select class="form-control" id="crust">
+                    <option selected>Open this select menu</option>
+                    <option value="pan">Handmade Pan</option>
+                    <option value="thin">Crunchy Thin Crust</option>
+                    <option value="brooklyn">Brooklyn Style</option>
+                    <option value="free">Glutten Free Crust</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <button type="submit" class="btn-lg">Place My Order.</button>
+      </form>
+
+      <div id="receipt">
+        <h4>Thank You <span id="userName2"></span></h4>
+        <span id="textInput">
+          <p>Here is an overview of your order</p>
+          <ul id="list"></ul>
+          <p>Your total is: <span id="finalTotal"></span></p>
+        </span>
+      </div>
+
     </div>
 
   </body>
