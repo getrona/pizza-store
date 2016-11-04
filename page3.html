@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="page2.html">Our Pizza</a></li>
+              <li><a href="page3.html">Order Now</a></li>
+              <li><a href="contact.html">Contact US</a></li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+      <form>
+
+        <div class="well well-lg">
+          <div class="row">
+            <div class="col-md-5">
+              <label for="name">Name:</label>
+              <input id="name" class="form-control">
+            </div>
+            <div class="col-md-2">
+              <label for="quantity">How Many Pizza?</label>
+              <input id="quantity" class="form-control">
+            </div>
+            <div class="col-md-5">
+              <label for="email">E-mail:</label>
+              <input id="email" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="well well-sm">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="img/pizza3.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/wings.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/salad.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/sticks.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/pasta.jpg" alt="" />
+            </div>
+            <div class="col-md-2">
+              <img src="img/pizza4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="well well-lg">
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <h4>Toppings:</h4>
+                  <label><input name="" type="checkbox" value="">Cheese</label><br>
+                  <label><input name="" type="checkbox" value="">Pepperoni</label><br>
+                  <label><input name="" type="checkbox" value="">Artichoke</label><br>
+                  <label><input name="" type="checkbox" value="">Anchovy</label><br>
+                  <label><input name="" type="checkbox" value="">Meat Lovers</label><br>
+                  <label><input name="" type="checkbox" value="">Veggie Lovers</label><br>
+              </div>
+            </div>
+              <div class="col-md-6">
+                <div>
+                  <h4>Sides:</h4>
+                  <label><input name="" type="checkbox" value="">Hot Wings</label><br>
+                  <label><input name="" type="checkbox" value="">Breadsticks</label><br>
+                  <label><input name="" type="checkbox" value="">Salad</label><br>
+                  <label><input name="" type="checkbox" value="">Cheese Bites</label><br>
+                  <label><input name="" type="checkbox" value="">Boneless Chicken</label><br>
+                  <label><input name="" type="checkbox" value="">Pasta Bowl</label><br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="well well-sm">
+            <div class="row">
+              <div class="col-md-2">
+                <img src="img/pizza1.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/bites.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/pasta.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/salad.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/boneless.jpg" alt="" />
+              </div>
+              <div class="col-md-2">
+                <img src="img/pizza2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+          <div class="well well-lg">
+            <div class="row">
+              <div class="col-md-4">
+                <div>
+                  <h4>Sizes:</h4>
+                  <select class="form-control" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xl">X-Large</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div>
+                  <h4>Sauces:</h4>
+                  <select class="form-control" id="sauce">
+                    <option value ="alfredo">Alfredo</option>
+                    <option value="bbq">BBQ</option>
+                    <option value="ranch">Ranch</option>
+                    <option value="tomato">Tomato</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div>
+                  <h4>Crusts:</h4>
+                  <select class="form-control" id="crust">
+                    <option value="pan">Handmade Pan</option>
+                    <option value="thin">Crunchy Thin Crust</option>
+                    <option value="brooklyn">Brooklyn Style</option>
+                    <option value="free">Glutten Free Crust</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <button type="btn-success">Place My Order.</button>
+      </form>
+    </div>
+
+  </body>
+</html>
