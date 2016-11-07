@@ -1,5 +1,10 @@
+#receipt {
+  display: none;
+}
 
-
+#receipt h4 {
+  text-align:center;
+}
 .jumbotron {
   text-align: center;
   font-style: italic;

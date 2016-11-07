@@ -8,22 +8,25 @@ function Pizza(size, toppings, sides, sauce, quantities) {
 
 Pizza.prototype.addPrice = function() {
   var price = ((this.toppings.length) + (this.sides.length * 2))
-  if (this.size === "md") {
+  if (this.size === "medium") {
     price = price + 6;
-  } else if (this.size === "lg") {
+  } else if (this.size === "large") {
     price = price + 7;
-  } else if (this.size === "xl") {
+  } else if (this.size === "Extra large") {
     price = price + 8;
+  } else if (this.size === "small") {
+    price = price + 5;
   } else {
     price = price + 5;
   }
-  var finalPrice = price * this.quantities;
+  var finalPrice = 0;
+  (this.quantities >= 1 ? finalPrice = price * this.quantities : finalPrice = price);
   return finalPrice;
 }
 
 
 $(document).ready(function(){
-  $(".btn-lb").submit(function(event){
+  $("form#pizza_order").submit(function(event){
     event.preventDefault();
     var userName = $("#name").val();
     var userEmail = $("#email").val();
@@ -32,33 +35,31 @@ $(document).ready(function(){
     var pizzaSauce = $("#sauce").val();
     var pizzaCrust = $("#crust").val();
     var pizzaSide = [];
-    var pizzaSideArr = pizzaSide;
     var pizzaTop = [];
-    var pizzaTopArr = pizzaTop;
-    var resultPrice = neoPizza.addPrice();
-    debugger;
 
     $("input:checkbox[name=topop]:checked").each(function(){
       var bonTop = $(this).val();
-      $("#list").append("<li>" + bonTop + "<li>");
+      $("#list").append("<li>" + bonTop + "</li>");
       pizzaTop.push(bonTop);
     });
 
-    debugger;
+
     $("input:checkbox[name=sideop]:checked").each(function(){
       var bonSide = $(this).val();
-      $("#list1").append("<li>" + bonSide + "<li>");
+      $("#list1").append("<li>" + bonSide + "</li>");
       pizzaSide.push(bonSide);
     });
 
-    debugger;
 
-    var neoPizza = new Pizza(pizzaSize, pizzaTopArr, pizzaSideArr, pizzaSauce, pizzaQuantity);
+    var neoPizza = new Pizza(pizzaSize, pizzaTop, pizzaSide, pizzaSauce, pizzaQuantity);
     $("#userName2").text(userName);
-    $("#list2").append("<li>" + neoPizza.sauce + "<li>");
+    var resultPrice = neoPizza.addPrice();
+    $("#list2").append("<li>" + neoPizza.sauce + "</li>");
     $("#combien").append(neoPizza.quantities);
     $("#finalTotal").append("$" + resultPrice);
-    $("#userSize").append("$" + neoPizza.size);
+    $("#userSize").append(neoPizza.size);
+    $("form").hide();
+    $("#receipt").show();
 
 
   });
